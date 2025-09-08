@@ -37,7 +37,7 @@ import './config/instrument.js'
 import express from 'express'
 import cors from 'cors'
 import 'dotenv/config'
-// import connectDB from './config/db.js'
+import connectDB from './config/db.js'
 import * as Sentry from "@sentry/node";
 import clerkwebhooks from './controllers/webhooks.js'
 
@@ -53,7 +53,7 @@ async function initDB() {
 }
 
 // Connect to database
-// await connectDB()
+await connectDB()
 
 // Middlewares
 app.use(cors())
