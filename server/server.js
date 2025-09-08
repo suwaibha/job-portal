@@ -57,7 +57,7 @@ app.post('/webhooks', express.raw({ type: 'application/json' }), clerkwebhooks)
 app.use(express.json())
 
 // Routes
-app.get('/', (req, res) => res.send("API working"))
+app.get('/', (req, res) => res.send("API working with db"))
 
 app.get("/debug-sentry", function mainHandler(req, res) {
   throw new Error("My first Sentry error!")
