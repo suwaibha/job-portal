@@ -44,14 +44,6 @@ import clerkwebhooks from './controllers/webhooks.js'
 // Initialize Express
 const app = express()
 
-let isConnected = false
-async function initDB() {
-  if (!isConnected) {
-    await connectDB()
-    isConnected = true
-  }
-}
-
 // Connect to database
 await connectDB()
 
